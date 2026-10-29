@@ -27,11 +27,9 @@
     <form method="POST" action="{{ route('books.store') }}">
         @csrf
         <label>Book title</label>
-        <input name="title" value="{{ old('title') }}" required>
-
+        <input name="title" value="{{ old('title') }}" placeholder="Enter book title" required>
         <label>Author</label>
-        <input name="author" value="{{ old('author') }}" required>
-
+        <input name="author" value="{{ old('author') }}" placeholder="Enter author name" required>
         <label>Status</label>
         
 <select name="status" required>
