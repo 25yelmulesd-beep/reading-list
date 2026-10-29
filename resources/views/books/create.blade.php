@@ -33,11 +33,13 @@
         <input name="author" value="{{ old('author') }}" required>
 
         <label>Status</label>
-        <select name="status" required>
-            <option value="to-read">To Read</option>
-            <option value="reading">Reading</option>
-            <option value="finished">Finished</option>
-        </select>
+        
+<select name="status" required>
+    <option value="to-read" {{ old('status', 'to-read') == 'to-read' ? 'selected' : '' }}>To Read</option>
+    <option value="reading" {{ old('status') == 'reading' ? 'selected' : '' }}>Reading</option>
+    <option value="finished" {{ old('status') == 'finished' ? 'selected' : '' }}>Finished</option>
+</select>
+
 
         <label>Notes (optional)</label>
         <textarea name="notes" rows="4">{{ old('notes') }}</textarea>
