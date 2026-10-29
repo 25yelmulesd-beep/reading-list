@@ -57,7 +57,13 @@
             </div>
         </div>
     @empty
-        <p style="margin-top:25px">No books yet. Click “Add a Book” to get started.</p>
+       <p style="margin-top:25px">
+    @if(request('status'))
+        No books found with this status. Try another filter.
+    @else
+        No books yet. Click "Add a Book" to get started.
+    @endif
+</p>
     @endforelse
 </div>
 </body>
