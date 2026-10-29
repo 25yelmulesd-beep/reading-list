@@ -40,7 +40,7 @@
 
 
         <label>Notes (optional)</label>
-        <textarea name="notes" rows="4">{{ old('notes') }}</textarea>
+        <textarea name="notes" rows="4" placeholder="Add any notes about this book...">{{ old('notes') }}</textarea>
 
         <button type="submit">Save Book</button>
         <a class="btn" href="{{ route('books.index') }}">Cancel</a>
