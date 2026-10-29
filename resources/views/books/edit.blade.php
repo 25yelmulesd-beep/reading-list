@@ -29,10 +29,9 @@
         @method('PUT')
 
         <label>Book title</label>
-        <input name="title" value="{{ old('title', $book->title) }}" required>
-
+        <input name="title" value="{{ old('title', $book->title) }}" placeholder="Enter book title" required>
         <label>Author</label>
-        <input name="author" value="{{ old('author', $book->author) }}" required>
+       <input name="author" value="{{ old('author', $book->author) }}" placeholder="Enter author name" required>
 
         <label>Status</label>
         <select name="status" required>
